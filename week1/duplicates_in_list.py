@@ -1,4 +1,4 @@
-l520i00   st = []
+list = []
 size = int(input("Enter the size of the list: "))
 print("Enter the numbers")
 for i in range(size):
