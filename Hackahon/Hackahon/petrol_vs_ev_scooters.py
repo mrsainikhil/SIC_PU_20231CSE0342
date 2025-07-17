@@ -35,9 +35,9 @@ def analyze_petrol_vs_electric_enhanced():
         print("Missing files:", missing_files)
         return
     
-    print("+"*80)
+    print("_"*80)
     print("COMPREHENSIVE ELECTRIC VS PETROL SCOOTER ANALYSIS")
-    print("+"*80)
+    print("_"*80)
     print("Starting enhanced analysis...\n")
     
     # Helper function to read Excel files 
@@ -70,9 +70,9 @@ def analyze_petrol_vs_electric_enhanced():
                 
         # 1. MARKET OVERVIEW & TRENDS
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("1. MARKET OVERVIEW & TRENDS")
-        print("+"*60)
+        print("_"*60)
         
         # Get sales data
         total_petrol = petrol_df.loc[petrol_df['Manufacturer'] == 'Total 2W sales', 'FY2025'].values[0]
@@ -152,9 +152,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 2.cost of ownership
 
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("2. TOTAL COST OF OWNERSHIP ANALYSIS")
-        print("+"*60)
+        print("_"*60)
         
         # cost calculations
         avg_battery_cost = battery_df['Replacement Cost Avg (₹)'].mean()
@@ -273,9 +273,9 @@ def analyze_petrol_vs_electric_enhanced():
                
         # 3. ENVIRONMENTAL IMPACT ANALYSIS
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("3. ENVIRONMENTAL IMPACT ANALYSIS")
-        print("+"*60)
+        print("_"*60)
         
         # carbon footprint calculation
         petrol_co2_per_liter = 2.31  # kg CO2 per liter
@@ -390,9 +390,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 4. PERFORMANCE & TECHNOLOGY COMPARISON
 
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("4. PERFORMANCE & TECHNOLOGY COMPARISON")
-        print("+"*60)
+        print("_"*60)
         
         # performance
         performance_metrics = pd.DataFrame({
@@ -515,9 +515,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 5. INFRASTRUCTURE & ECOSYSTEM ANALYSIS
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("5. INFRASTRUCTURE & ECOSYSTEM ANALYSIS")
-        print("+"*60)
+        print("_"*60)
         
         # Infrastructure data (estimated for major Indian cities)
         infrastructure = pd.DataFrame({
@@ -621,9 +621,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 6. CONSUMER BEHAVIOR & ADOPTION ANALYSIS
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("6. CONSUMER BEHAVIOR & ADOPTION ANALYSIS")
-        print("+"*60)
+        print("_"*60)
         
         # Consumer preference factors
         preference_factors = pd.DataFrame({
@@ -738,9 +738,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 7. MANUFACTURER ECOSYSTEM ANALYSIS
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("7. MANUFACTURER ECOSYSTEM ANALYSIS")
-        print("+"*60)
+        print("_"*60)
         
         # Process manufacturer data
         petrol_mfg = petrol_df[~petrol_df['Manufacturer'].str.contains('Total', na=False)]
@@ -836,9 +836,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 8. FUTURE OUTLOOK & PREDICTIONS
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("8. FUTURE OUTLOOK & PREDICTIONS")
-        print("+"*60)
+        print("_"*60)
         
         # Technology roadmap
         tech_roadmap = pd.DataFrame({
@@ -870,9 +870,9 @@ def analyze_petrol_vs_electric_enhanced():
         print(predictions.to_string(index=False))
         
         # SWOT Analysis
-        print("\n" + "+"*40)
+        print("\n" + "_"*40)
         print("SWOT ANALYSIS")
-        print("+"*40)
+        print("_"*40)
         
         swot_electric = pd.DataFrame({
             'Strengths': ['Lower running costs', 'Zero emissions', 'Instant torque', 'Government support'],
@@ -959,9 +959,9 @@ def analyze_petrol_vs_electric_enhanced():
         
         # 9. EXECUTIVE SUMMARY
 
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("9. EXECUTIVE SUMMARY")
-        print("+"*60)
+        print("_"*60)
         
         # Calculate savings using correct variable names
         savings_10_year = petrol_total.iloc[-1] - electric_total.iloc[-1]
@@ -1013,9 +1013,9 @@ For Policymakers:
 • Consider ICE phase-out timeline by 2035
         """)
         
-        print("\n" + "+"*60)
+        print("\n" + "_"*60)
         print("ANALYSIS COMPLETED SUCCESSFULLY")
-        print("+"*60)
+        print("_"*60)
         
     except Exception as e:
         print(f"\nError during analysis: {str(e)}")
