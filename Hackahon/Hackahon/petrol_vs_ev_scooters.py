@@ -478,8 +478,7 @@ def analyze_petrol_vs_electric_enhanced():
         
         bars1 = ax3.bar(efficiency_data['Vehicle Type'], efficiency_data['Energy Efficiency (km/unit)'], 
                        alpha=0.7, color=['#FF6B6B', '#4ECDC4'], label='Efficiency')
-        line1 = ax3_twin.plot(efficiency_data['Vehicle Type'], efficiency_data['Cost per km (₹)'], 
-                             'ko-', linewidth=2, markersize=8, label='Cost/km')
+       
         
         ax3.set_title('Efficiency & Cost Comparison', fontweight='bold',fontsize=10)
         ax3.set_ylabel('Energy Efficiency (km/unit)')
@@ -573,8 +572,6 @@ def analyze_petrol_vs_electric_enhanced():
         ax2_twin = ax2.twinx()
         bars = ax2.bar(refuel_data['Type'], refuel_data['Time (minutes)'], 
                       color=['#FF6B6B', '#4ECDC4', '#95E1D3'], alpha=0.7)
-        line = ax2_twin.plot(refuel_data['Type'], refuel_data['Range Added (km)'], 
-                           'ko-', linewidth=2, markersize=8)
         
         ax2.set_title('Refuel/Recharge Time vs Range', fontweight='bold',fontsize=10)
         ax2.set_ylabel('Time (minutes)')
@@ -665,7 +662,7 @@ def analyze_petrol_vs_electric_enhanced():
         print(barriers.to_string(index=False))
         
         # Visualize consumer analysis
-        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(14, 10))
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(14, 8))
         
         # Consumer preference radar chart
         categories = preference_factors['Factor'].tolist()
